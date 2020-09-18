@@ -26,7 +26,7 @@ const ColorList = ({ colors, updateColors }) => {
     axiosWithAuth()
       .put(`/colors/${id}`, colorToEdit)
       .then( res => {
-        console.log("colorlist res data", res.data)
+        // console.log("colorlist res data", res.data)
         const newColors = colors.filter(color => {
           if(color.id !== id) {
             return color
