@@ -1,16 +1,16 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import BubblePage from "./BubblePage";
 
-const colorsData = [
 
-  
-]
+const testColors = () => {
+  axiosWithAuth()
+      .get("/api/colors")
+      .then((response) => setColorList(response.data))
+      .catch((error) => console.log(error.response.data))
+};
 
+let getColors = testColors()
 
-test("Fetches data and renders the bubbles", () => {
-  // Finish this test
-  const { rerender } = render(<BubblePage colors={[]} />);
-  let colorsArr = screen.queryAllByTestId(/colors/i);
-  expect(colorsArr).toHaveLength(0);
-});
+jest.mock(getColors)
+console.log(getColors)

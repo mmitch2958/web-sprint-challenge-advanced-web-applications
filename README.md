@@ -28,9 +28,23 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain what a token is used for.
+Tokens are used to encrypt data between two ssytems so privagte data can be authenticated. 
+
 2. What steps can you take in your web apps to keep your data secure?
+Use Authorization and Tokens to secure session data 
+
 3. Describe how web servers work.
+Web servers sit on the net and host applications and databases to allow clients to navagae specific websites.  They can manage hosting of anything from cloud storage, web apps, website's , priave databases, online index's etc.   Typically managed with  a server managment system and can be loaded with any range of application stacks for development.  One example is a LAMP stack, Typically used wtih a linux web sever, and loasded with , Linux, Apache, MySql, PHP/Perl/Python.   This group is a source of copmponets including an operating system, http server, relational database, and programing language ( for front/back end dev). 
+
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+C - Put/Post
+R - Get 
+u - Put 
+d - Delete
+
+Put can map to both C/U ( create / update ) depending on the existance of the URI used with the PUT 
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
