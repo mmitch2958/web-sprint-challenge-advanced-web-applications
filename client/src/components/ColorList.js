@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { useParams } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import { Linking } from 'react-native'
+
+const url="https://google.com"
+
+<Text onPress={() => Linking.openURL(url)}>
+    {url}
+</Text>
 
 const initialColor = {
   color: "",
@@ -14,6 +21,8 @@ const ColorList = ({ colors, updateColors }) => {
   /**************** useParams and new color ********************************************************/
   const { id } = useParams();
   const [ newColor, setNewColor ] = useState(initialColor)
+
+  //EDIT COLOR CODE BELOW
 
   const editColor = color => {
     setEditing(true);
@@ -38,6 +47,9 @@ const ColorList = ({ colors, updateColors }) => {
       })
       .catch( err => console.log('error editing colorlist ', err))
   };
+
+
+  //DELETE COLOR CODE BELOW 
 
   const deleteColor = color => {
     
@@ -65,6 +77,8 @@ const ColorList = ({ colors, updateColors }) => {
     .catch(err => console.log('error posting new color',err))
   }
 
+
+  //FORM OPTIONS BELOW 
   return (
     <div className="colors-wrap">
       <p>colors</p>
@@ -130,6 +144,7 @@ const ColorList = ({ colors, updateColors }) => {
           color: e.target.value})
         }}
         />
+      
 
         <label htmlFor="hex">Hex Code</label>
         <input 
