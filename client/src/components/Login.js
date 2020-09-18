@@ -35,8 +35,9 @@ const submitLogin = (e) => {
 
   return (
     <>
-      <h1>Welcome to the Bubble App!</h1>
-      <p>Please login to continue</p>
+      <h1>Bubble App!</h1>
+
+      <p>*Login to continue*</p>
       <form onSubmit={submitLogin}>
         <label htmlFor="username">Username</label>
         <input

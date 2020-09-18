@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-import { Linking } from 'react-native'
-
-const url="https://google.com"
-
-<Text onPress={() => Linking.openURL(url)}>
-    {url}
-</Text>
 
 const initialColor = {
   color: "",
